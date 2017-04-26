@@ -1,0 +1,11 @@
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+.\#*
+
+# projectiles files
+.projectile
+
+.env
+certs/
+debug/
