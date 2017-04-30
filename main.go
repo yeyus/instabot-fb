@@ -68,17 +68,6 @@ func main() {
 		w.Write([]byte("instabot-fb says hello world!"))
 	})
 
-	handler.Mux.HandleFunc("/forecast", func(w http.ResponseWriter, r *http.Request) {
-		f, err := forecast.GetForecast(r.URL.Query()["location"][0])
-		if err != nil {
-			w.Write([]byte("error"))
-			return
-		}
-
-		str := fmt.Sprintf("forecast data: forecast->%v", f)
-		w.Write([]byte(str))
-	})
-
 	http.Handle("/", handler.Mux)
 
 	go func() {
@@ -91,8 +80,8 @@ func main() {
 	if generateCerts {
 		certManager := autocert.Manager{
 			Prompt:     autocert.AcceptTOS,
-			HostPolicy: autocert.HostWhitelist(domain), //your domain here
-			Cache:      autocert.DirCache("certs"),     //folder for storing certificates
+			HostPolicy: autocert.HostWhitelist(domain),
+			Cache:      autocert.DirCache("certs"),
 		}
 
 		server := &http.Server{
