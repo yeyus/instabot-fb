@@ -1,6 +1,8 @@
 
 # Instabot FB - Wit.ai enabled FB bot boilerplate
 
+[![Build Status](https://travis-ci.org/yeyus/instabot-fb.svg?branch=master)](https://travis-ci.org/yeyus/instabot-fb)
+
 ## Introduction
 
 This repository is a very simple Go boilerplate project integrating wit.ai and Facebook Messenger API to provide support for bot integration. It also supports fetching valid CA signed certificates through Let's Encrypt.
