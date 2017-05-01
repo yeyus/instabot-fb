@@ -77,7 +77,7 @@ server {
        listen 443 ssl http2;
        listen [::]:443 ssl http2;
        include snippets/ssl-params.conf;
-       include snippets/ssl-micro.ag6vw.com.conf;
+       include snippets/ssl-ssl1.example.com.conf;
 
        location / {
 		   proxy_pass http://127.0.0.1:10443;
